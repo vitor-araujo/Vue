@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue App - made by Vitor</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="">
+            Counter : {{count}}
+            <button class="vue-btn" @click="increment">Increment counter</button>
+        </div>
+    </div>  
+
+    <script>
+       
+        var app = new Vue({
+            el: "#app",
+            data: {
+                count: 0
+            },
+            methods: {
+                increment() {
+                    this.count++
+                }
+            },
+            updated () {
+               alert(`you updated the counter ${this.count} times`)
+            }
+
+            // },
+            // created() {
+            //     this.alertTime()
+            // },
+            // mounted () {
+            //     this.alertTime()
+            // },
+
+        })
+    </script>
+
+
+</body>
+
+</html>
